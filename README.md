@@ -21,8 +21,8 @@ This is a React project bootstrapped with **Vite** and written in **TypeScript (
 ### 1️⃣ Clone the Repository
 
 ```sh
-  git clone https://github.com/your-username/your-repo-name.git
-  cd your-repo-name
+  git clone https://github.com/sribalan98/mock-genie.git
+  cd mock-genie
 ```
 
 ### 2️⃣ Install Dependencies
