@@ -1,67 +1,29 @@
-import { Box, Sheet, useTheme, Typography, Button } from '@mui/joy';
-import GitHubIcon from '@mui/icons-material/GitHub';
+import { Box, useTheme } from '@mui/joy';
+import Navbar from '../components/Navbar';
+import TitleBoard from '../components/TitleBoard';
+import GenerateArea from '../components/GenerateArea';
 
 function Home() {
-  const themeConfig = useTheme(); // Get theme values
+  const themeConfig = useTheme();
   return (
     <>
-      <Box sx={{ height: '100vh', width: '100vw', bgcolor: '#242424' }}>
-        <Sheet
+      <Box
+        sx={{
+          height: 'auto',
+          width: 'auto',
+          bgcolor: themeConfig.vars.main.MainBgColor,
+        }}
+      >
+        <Navbar />
+        <Box
           sx={{
-            height: '5rem',
-            width: 'auto',
-            display: 'flex',
-            alignItems: 'center',
-            backgroundImage: themeConfig.vars.palette.primary.solidBg,
-            paddingX: '2rem',
+            flexGrow: 1,
+            padding: '4rem',
           }}
         >
-          <Typography
-            level="h1"
-            sx={{
-              fontWeight: 800,
-              color: 'white',
-              fontFamily: 'Roboto',
-              letterSpacing: '1px',
-            }}
-          >
-            Mock Genie
-          </Typography>
-          {/* icons on right end */}
-          <Box
-            sx={{
-              marginLeft: 'auto',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-            }}
-          >
-            <Button
-              variant="solid"
-              sx={{
-                backgroundImage: themeConfig.vars.palette.primary.solidBg,
-                backgroundSize: 'cover',
-                color: 'white',
-                fontFamily: 'Roboto',
-                fontWeight: 600,
-                letterSpacing: '0.9px',
-                '&:hover': {
-                  backgroundImage: themeConfig.vars.palette.primary.solidBg, // Keeps gradient on hover
-                },
-              }}
-              startDecorator={
-                <GitHubIcon
-                  sx={{
-                    fontSize: '1.5rem',
-                    color: 'white',
-                  }}
-                />
-              }
-            >
-              Sribalan
-            </Button>
-          </Box>
-        </Sheet>
+          <TitleBoard />
+          <GenerateArea />
+        </Box>
       </Box>
     </>
   );
