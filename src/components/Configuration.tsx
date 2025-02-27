@@ -9,7 +9,7 @@ import {
 } from '@mui/joy';
 import { ConfigurationSelectOption } from '../types/types';
 import { JSX } from '@emotion/react/jsx-runtime';
-import { randomName } from '../Faker/Faker';
+import { randomUser } from '../Faker/Faker';
 
 function Configuration() {
   const themeConfig = useTheme();
@@ -84,7 +84,7 @@ function Configuration() {
             <Input id="dataSize" placeholder="Type in here…" type="number" />
           </Box>
           <Box sx={{ marginY: '1rem' }}>
-            <Button onClick={randomName}>Generate</Button>
+            <Button onClick={() => randomUser(10)}>Generate</Button>
           </Box>
         </Box>
       </Box>
